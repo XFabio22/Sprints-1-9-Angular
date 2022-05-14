@@ -1,0 +1,77 @@
+*{
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.contenedor{
+    display: flex;
+    
+    flex-flow:column nowrap;
+    max-width: 1200px;
+}   
+    .header{
+        display: flex;
+        flex-flow:column nowrap;
+        background-color: rgb(0, 0,0);
+    }   
+        .menu{
+            background-color: rgb(80, 91, 137);
+            display: flex;
+            flex-flow: row nowrap;
+        }
+            .logo{
+                background-color: rgb(255, 0, 0);
+                flex: 1 1 auto;
+            }
+            .navegacion{
+                background-color: rgb(255, 0, 0);
+                flex: 4 1 auto;
+            }
+            .social{
+                background-color: rgb(255, 0, 0);
+                flex: 1 1 auto;
+
+            }
+        .texto-relleno{
+            background-color: rgb(255, 136, 0);
+        }   h1{
+            background-color: rgb(251, 255, 0);
+        }
+
+    .section{
+        background-color: rgb(0, 0,0);
+        display: flex;
+        
+        
+    }
+        .articulos{
+            background-color: rgb(26, 27, 49);
+            display: flex;
+            flex: 2 1 auto ;
+            flex-flow: row wrap;
+
+        }
+
+            .article{
+                background-color: rgb(13, 41, 144);
+                flex: 1 1 40%;
+            }
+            .navegacion2{
+                background-color: rgb(23, 124, 196);
+                flex: 1 1 100%;
+            }
+
+        .aside{
+        background-color: rgb(240, 58, 115);
+            flex: 1 1 auto;
+        }
+            .publicidad{
+                background-color: rgb(226, 206, 93);
+            }
+
+    .footer{
+        background-color: rgb(0, 0,0);
+    }
+        .dominiosWeb{
+            background-color: rgb(255, 191, 0);
+        }
