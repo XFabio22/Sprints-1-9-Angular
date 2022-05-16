@@ -20,7 +20,7 @@ i{
        
         display: flex;
         flex-flow: column nowrap;
-        background: url(./header.jpg);
+        background: url(/img/header.jpg);
         background-position: center;
         background-attachment: contain;
         background-size: cover;
