@@ -17,72 +17,74 @@ h3{
     border-radius: 40%;
 }
 .contenedor{
-    display: flex;
-    flex-flow: column nowrap;
+    display: grid;
+    grid-template-columns: auto;
     max-width: 1200px;
-
 }
-    header{
-       
-        display: flex;
-        flex-flow: column nowrap;
+    .header{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto ;
         background: url(/img/header.jpg);
         background-position: center;
         background-attachment: contain;
         background-size: cover;
-        
         height: 400px;
-        
-        
     }
-
         .menu{
             
-            display: flex;
-            flex-flow: row nowrap;
-            height: 130px;    
+            display: grid;
+            grid-template-columns: auto auto auto;
+            height: auto;  
             
-        }
+
+            
+        
+        } 
             .logo{
                 animation: moverIzquierda 2s ease-in;
                 align-items: center;
                 border-radius: 3px;
-                flex: 1 1 auto;
+                
             }
             .nav{
                 animation: moverAbajo 2s ease-in; 
                 border-radius: 3px;
-                flex: 6 1 auto;
                 padding: 10px;   
                 display: flex;             
-                justify-content:space-around;
+                justify-content:space-between;
                 flex-direction: row;
-                
+                align-items: center;
+            
             }
                 .nav-a{
                     border-radius: 3px;
                     display: inline-block;
-                   align-items: center;
+                    align-items: center;
                     text-decoration: none;
                     padding: 0px;
                     margin: 0px;
                     width: auto;
                     height: 30px;
-                    
+                
                 }
                 .nav-a:hover{
                     background-color: antiquewhite;
                     transition: background-color 1s ;
-                 
+             
                 }
-                
+            
             .social{
+                display: flex;
                 animation: moverDerecha 2s ease-in;
-
+                justify-content: center;
+                align-items: center;
+                flex-direction: row;
                 border-radius: 3px;
-                flex: 1 1 auto;
+            
 
             }
+
         .texto-principal{
            
             text-align: center;
@@ -90,12 +92,12 @@ h3{
             h1{
                 animation: moverArriba 2s ease-in; 
                 opacity: 0.5;
-               color: orange;
-               
+                color: orange;
+           
             }
 
     .seccion{     
-        display: flex; 
+        display: flex;
         
     }
         .articulos{
@@ -136,11 +138,35 @@ h3{
             background-color: aliceblue;       
         }
 
+@media (max-width:279.98px){
+    .contenedor{
+        width: auto;
+        display: grid;
+        flex-flow: column nowrap;
+        max-width: auto;
+    }
+    .header{
+        height: auto;
+        width: 100%;
+    }
+    .menu{
+        flex-direction: column;
+        height: auto;
+        justify-content: space-between;
+    }
+    .nav{   
+        flex-direction: column;
+        height: auto;
 
+    }
+    .navegacion{
+        width: auto;
+    }
+}
 @media (min-width:280px) and (max-width:575.98px){
     .contenedor{
         width: auto;
-        display: flex;
+        display: grid;
         flex-flow: column nowrap;
         max-width: 550px;
     }
@@ -152,7 +178,7 @@ h3{
         flex-direction: column;
         height: auto;
     }
-    .nav{
+    .nav{   
         flex-direction: column;
         height: auto;
 
@@ -171,6 +197,8 @@ h3{
 
     }
 }
+
+
 @keyframes moverIzquierda{
     0%{
         opacity: 0;
